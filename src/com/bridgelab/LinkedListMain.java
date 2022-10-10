@@ -14,5 +14,11 @@ public class LinkedListMain {
         list2.add(30);
         list2.add(70);
         list2.show();
+
+        LinkedList<Integer>list3 = new LinkedList<>();
+        list3.append(56);
+        list3.append(30);
+        list3.append(70);
+        list3.show();
     }
 }

@@ -6,10 +6,10 @@ public class LinkedList <T>{
 
     public void push(T data) {
         Node<T> newNode = new Node(data);
-        if(head == null){
+        if (head == null) {
             head = newNode;
             tail = newNode;
-        }else{
+        } else {
             newNode.next = head;
             head = newNode;
         }
@@ -20,23 +20,33 @@ public class LinkedList <T>{
         if (head == null) {
             head = newNode;
             tail = newNode;
-        }else{
+        } else {
             tail.next = newNode;
             tail = newNode;
         }
     }
-    public void show(){
-        if(head == null){
+
+    public void show() {
+        if (head == null) {
             System.out.println("Linked list is Empty");
-        }
-        else{
+        } else {
             Node<T> temp = head;
-            while(temp != null){
+            while (temp != null) {
                 System.out.print(temp.data + " ");
                 temp = temp.next;
             }
             System.out.println();
         }
+    }
 
+    public void append(T data) {
+        Node<T> newNode = new Node<>(data);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
     }
 }
