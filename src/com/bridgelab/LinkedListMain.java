@@ -27,7 +27,7 @@ public class LinkedListMain {
         list4.insert(70);
         list4.insert(30);
         list4.show();
-        
+
         Integer popFirstElement = list1.popFirst();
         if (popFirstElement == null) {
             System.out.println("Linked List Empty");
@@ -35,6 +35,13 @@ public class LinkedListMain {
             System.out.println("Popped the first element -> "+popFirstElement);
         }
         list1.show();
+        Integer popLastElement = list3.popLast();
+        if (popLastElement == null) {
+            System.out.println("Linked List Empty");
+        } else {
+            System.out.println("Popped the last element -> "+popLastElement);
+        }
+        list3.show();
 
     }
 }

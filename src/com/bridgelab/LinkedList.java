@@ -72,5 +72,19 @@ public class LinkedList <T> {
             return data;
         }
     }
+    public T popLast() {
+        if (head == null) {
+            return null;
+        } else {
+            Node<T> temp = head;
+            while (temp.next != tail) {
+                temp = temp.next;
+            }
+            T data = tail.data;
+            temp.next = null;
+            tail = temp;
+            return data;
+        }
+    }
 }
 
