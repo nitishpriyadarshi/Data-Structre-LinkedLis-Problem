@@ -63,5 +63,14 @@ public class LinkedList <T> {
             newNode.next = temp;
         }
     }
+    public T popFirst() {
+        if (head == null) {
+            return null;
+        } else {
+            T data = head.data;
+            head = head.next;
+            return data;
+        }
+    }
 }
 
